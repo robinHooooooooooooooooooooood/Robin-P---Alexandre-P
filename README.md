@@ -37,26 +37,20 @@ Including them leads to an unrealistically high R². We detect this using correl
    - Plots: actual vs predicted, residual distribution
 
 ## Results
-**Fill with your final numbers (from `results/metrics/metrics_summary.csv`):**
-- **Baseline with simple Linear Regression (with leakage):** R² = **0.928**, MAE = **11.71 g/km**, RMSE = **17.79 g/km**
-- **Clean dataset (best model : Random Forrest):** R² = **0.95329**, MAE = **9.628238 g/km**, RMSE = **14.332936 g/km**
+**Best model (clean dataset): Random Forest**
+
+- **Baseline (Linear Regression with leakage):** R² = **0.928**, MAE = **11.71 g/km**, RMSE = **17.79 g/km**
+- **Clean dataset (Random Forest):** R² = **0.95329**, MAE = **9.628238 g/km**, RMSE = **14.332936 g/km**
 
 Metrics: `results/metrics/`  
 Figures: `results/figures/`
+
 ## Feature importance (model interpretability)
+We used **permutation importance** (drop in R² after shuffling a feature) to compare feature influence across models.
 
-To understand **which variables drive the predictions**, we exported feature influence tables to `results/metrics/`:
-
-- `rf_permutation_importance.json`
-- `xgb_permutation_importance.json`
-- `svm_permutation_importance.json`
-- `linear_regression_coefficients.json`
-
-### Random Forest (best model) — permutation importance (ΔR² after shuffling)
-Permutation importance measures how much the model performance drops when a feature is randomly shuffled (higher = more important).
-
+### Random Forest (best model) — permutation importance (ΔR²)
 | feature | importance_mean | importance_std |
-|---|---|---|
+|---|---:|---:|
 | enginesize_l | 0.997249 | 0.012199 |
 | cylinders | 0.162143 | 0.002036 |
 | modelyear | 0.161842 | 0.002548 |
@@ -66,11 +60,9 @@ Permutation importance measures how much the model performance drops when a feat
 | fuel_type_decoded | 0.011407 | 0.000518 |
 | fueltype | 0.011178 | 0.000493 |
 
-**Interpretation:** the model mainly relies on **engine size**, then **cylinders** and **model year**, followed by vehicle category and manufacturer.
-
 ### XGBoost — permutation importance (ΔR²)
 | feature | importance_mean | importance_std |
-|---|---|---|
+|---|---:|---:|
 | enginesize_l | 0.696741 | 0.010231 |
 | vehicleclass | 0.126222 | 0.001955 |
 | cylinders | 0.104071 | 0.001833 |
@@ -82,7 +74,7 @@ Permutation importance measures how much the model performance drops when a feat
 
 ### SVM (+ TruncatedSVD) — permutation importance (ΔR²)
 | feature | importance_mean | importance_std |
-|---|---|---|
+|---|---:|---:|
 | enginesize_l | 0.469848 | 0.008047 |
 | cylinders | 0.202885 | 0.002596 |
 | modelyear | 0.107816 | 0.003114 |
@@ -92,35 +84,7 @@ Permutation importance measures how much the model performance drops when a feat
 | fueltype | 0.010768 | 0.000518 |
 | fuel_type_decoded | 0.010768 | 0.000518 |
 
-### Linear Regression (baseline) — coefficients (true “weights” after one-hot encoding)
-A linear model provides explicit coefficients after preprocessing (one-hot encoding). These are not directly comparable to permutation importance but they give a direction (+/-) and magnitude.
-
-Top positive coefficients:
-| feature | coefficient | abs_coefficient |
-|---|---|---|
-| cat__make_FERRARI | 124.253 | 124.253 |
-| cat__make_BUGATTI | 123.261 | 123.261 |
-| cat__make_Bugatti | 118.000 | 118.000 |
-| cat__make_LAMBORGHINI | 74.278 | 74.278 |
-| cat__vehicleclass_Van: Passenger | 67.413 | 67.413 |
-| cat__make_MASERATI | 67.064 | 67.064 |
-| cat__make_Lamborghini | 64.738 | 64.738 |
-| cat__make_BENTLEY | 62.592 | 62.592 |
-
-Top negative coefficients:
-| feature | coefficient | abs_coefficient |
-|---|---|---|
-| cat__make_SMART | -49.560 | 49.560 |
-| cat__make_GEO | -48.803 | 48.803 |
-| cat__transmission_AV6 | -38.341 | 38.341 |
-| cat__make_Mazda | -35.632 | 35.632 |
-| cat__make_Toyota | -33.882 | 33.882 |
-| cat__vehicleclass_SUBCOMPACT | -33.386 | 33.386 |
-| cat__vehicleclass_MINICOMPACT | -32.944 | 32.944 |
-| cat__vehicleclass_COMPACT | -32.394 | 32.394 |
-
-Across models, `enginesize_l` is by far the most influential feature, followed by `cylinders` and `modelyear`. Categorical variables (`vehicleclass`, `make`, `transmission`, `fueltype`) have a smaller but consistent contribution, mainly refining predictions through vehicle segment differences.
-
+**Conclusion (features):** Across models, `enginesize_l` is by far the most influential feature, followed by `cylinders` and `modelyear`. Categorical variables (`vehicleclass`, `make`, `transmission`, `fueltype`) contribute less but consistently refine predictions through vehicle segment differences.
 
 ## How to run
 ### Option A — Google Colab (recommended)
