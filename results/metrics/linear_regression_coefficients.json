@@ -1,0 +1,307 @@
+{
+  "model_type": "LinearRegression",
+  "top_k": 60,
+  "note": "Coefficients are computed after preprocessing (including OneHotEncoding).",
+  "coefficients": [
+    {
+      "feature": "cat__make_FERRARI",
+      "coefficient": 124.2529440357415,
+      "abs_coefficient": 124.2529440357415
+    },
+    {
+      "feature": "cat__make_BUGATTI",
+      "coefficient": 123.26100062882138,
+      "abs_coefficient": 123.26100062882138
+    },
+    {
+      "feature": "cat__make_Bugatti",
+      "coefficient": 117.99965284265771,
+      "abs_coefficient": 117.99965284265771
+    },
+    {
+      "feature": "cat__make_LAMBORGHINI",
+      "coefficient": 74.27751262392805,
+      "abs_coefficient": 74.27751262392805
+    },
+    {
+      "feature": "cat__vehicleclass_Van: Passenger",
+      "coefficient": 67.41318862914835,
+      "abs_coefficient": 67.41318862914835
+    },
+    {
+      "feature": "cat__make_MASERATI",
+      "coefficient": 67.06406978323201,
+      "abs_coefficient": 67.06406978323201
+    },
+    {
+      "feature": "cat__make_Lamborghini",
+      "coefficient": 64.73788931714694,
+      "abs_coefficient": 64.73788931714694
+    },
+    {
+      "feature": "cat__make_BENTLEY",
+      "coefficient": 62.59203835197121,
+      "abs_coefficient": 62.59203835197121
+    },
+    {
+      "feature": "cat__vehicleclass_VAN - PASSENGER",
+      "coefficient": 56.28944811483614,
+      "abs_coefficient": 56.28944811483614
+    },
+    {
+      "feature": "cat__make_SMART",
+      "coefficient": -49.56016870639736,
+      "abs_coefficient": 49.56016870639736
+    },
+    {
+      "feature": "cat__make_GEO",
+      "coefficient": -48.80315697464426,
+      "abs_coefficient": 48.80315697464426
+    },
+    {
+      "feature": "cat__vehicleclass_UL",
+      "coefficient": 40.32061553520866,
+      "abs_coefficient": 40.32061553520866
+    },
+    {
+      "feature": "cat__vehicleclass_Pickup truck: Small",
+      "coefficient": 40.273975865380784,
+      "abs_coefficient": 40.273975865380784
+    },
+    {
+      "feature": "cat__transmission_AV6",
+      "coefficient": -38.34096988741402,
+      "abs_coefficient": 38.34096988741402
+    },
+    {
+      "feature": "cat__make_Maserati",
+      "coefficient": 37.50787368445548,
+      "abs_coefficient": 37.50787368445548
+    },
+    {
+      "feature": "cat__make_Mazda",
+      "coefficient": -35.632051734183705,
+      "abs_coefficient": 35.632051734183705
+    },
+    {
+      "feature": "cat__vehicleclass_VAN - CARGO",
+      "coefficient": 34.04604322430204,
+      "abs_coefficient": 34.04604322430204
+    },
+    {
+      "feature": "cat__make_Toyota",
+      "coefficient": -33.88160881936578,
+      "abs_coefficient": 33.88160881936578
+    },
+    {
+      "feature": "cat__vehicleclass_SUBCOMPACT",
+      "coefficient": -33.38560322150728,
+      "abs_coefficient": 33.38560322150728
+    },
+    {
+      "feature": "cat__vehicleclass_MINICOMPACT",
+      "coefficient": -32.94373730721658,
+      "abs_coefficient": 32.94373730721658
+    },
+    {
+      "feature": "cat__vehicleclass_COMPACT",
+      "coefficient": -32.3943564100355,
+      "abs_coefficient": 32.3943564100355
+    },
+    {
+      "feature": "cat__vehicleclass_MID-SIZE",
+      "coefficient": -32.31799198611413,
+      "abs_coefficient": 32.31799198611413
+    },
+    {
+      "feature": "cat__vehicleclass_FULL-SIZE",
+      "coefficient": -32.22857665153786,
+      "abs_coefficient": 32.22857665153786
+    },
+    {
+      "feature": "cat__make_Lexus",
+      "coefficient": -31.391986259986922,
+      "abs_coefficient": 31.391986259986922
+    },
+    {
+      "feature": "num__enginesize_l",
+      "coefficient": 31.10059572756885,
+      "abs_coefficient": 31.10059572756885
+    },
+    {
+      "feature": "cat__vehicleclass_TWO-SEATER",
+      "coefficient": -30.35229659720451,
+      "abs_coefficient": 30.35229659720451
+    },
+    {
+      "feature": "cat__make_HUMMER",
+      "coefficient": 29.9954864610263,
+      "abs_coefficient": 29.9954864610263
+    },
+    {
+      "feature": "cat__make_Acura",
+      "coefficient": -29.275301968246307,
+      "abs_coefficient": 29.275301968246307
+    },
+    {
+      "feature": "cat__transmission_AV",
+      "coefficient": -28.774977086091972,
+      "abs_coefficient": 28.774977086091972
+    },
+    {
+      "feature": "cat__make_Hyundai",
+      "coefficient": -28.012755688158745,
+      "abs_coefficient": 28.012755688158745
+    },
+    {
+      "feature": "cat__vehicleclass_STATION WAGON - SMALL",
+      "coefficient": -27.014972953644776,
+      "abs_coefficient": 27.014972953644776
+    },
+    {
+      "feature": "cat__vehicleclass_STATION WAGON - MID-SIZE",
+      "coefficient": -26.50625897337834,
+      "abs_coefficient": 26.50625897337834
+    },
+    {
+      "feature": "cat__make_SRT",
+      "coefficient": -26.02094385592133,
+      "abs_coefficient": 26.02094385592133
+    },
+    {
+      "feature": "cat__make_ASTON MARTIN",
+      "coefficient": 25.74902749129547,
+      "abs_coefficient": 25.74902749129547
+    },
+    {
+      "feature": "cat__make_PONTIAC",
+      "coefficient": -24.104921405548694,
+      "abs_coefficient": 24.104921405548694
+    },
+    {
+      "feature": "cat__make_Kia",
+      "coefficient": -23.921529006063736,
+      "abs_coefficient": 23.921529006063736
+    },
+    {
+      "feature": "cat__make_ROLLS-ROYCE",
+      "coefficient": 23.352498098703855,
+      "abs_coefficient": 23.352498098703855
+    },
+    {
+      "feature": "cat__make_LAND ROVER",
+      "coefficient": 23.19303342086934,
+      "abs_coefficient": 23.19303342086934
+    },
+    {
+      "feature": "cat__vehicleclass_PICKUP TRUCK - STANDARD",
+      "coefficient": 22.964310385534915,
+      "abs_coefficient": 22.964310385534915
+    },
+    {
+      "feature": "cat__make_HONDA",
+      "coefficient": -22.824689317095263,
+      "abs_coefficient": 22.824689317095263
+    },
+    {
+      "feature": "cat__make_TOYOTA",
+      "coefficient": -22.153420859257714,
+      "abs_coefficient": 22.153420859257714
+    },
+    {
+      "feature": "cat__make_MINI",
+      "coefficient": -21.724393174248522,
+      "abs_coefficient": 21.724393174248522
+    },
+    {
+      "feature": "cat__make_CHEVROLET",
+      "coefficient": -21.476488386968875,
+      "abs_coefficient": 21.476488386968875
+    },
+    {
+      "feature": "cat__make_SATURN",
+      "coefficient": -21.069439844399245,
+      "abs_coefficient": 21.069439844399245
+    },
+    {
+      "feature": "cat__make_GENESIS",
+      "coefficient": 20.3825478763564,
+      "abs_coefficient": 20.3825478763564
+    },
+    {
+      "feature": "cat__make_LEXUS",
+      "coefficient": -20.24621506754943,
+      "abs_coefficient": 20.24621506754943
+    },
+    {
+      "feature": "cat__make_Honda",
+      "coefficient": -19.89972341827804,
+      "abs_coefficient": 19.89972341827804
+    },
+    {
+      "feature": "cat__transmission_M4",
+      "coefficient": -19.659725997834723,
+      "abs_coefficient": 19.659725997834723
+    },
+    {
+      "feature": "cat__transmission_A3",
+      "coefficient": 19.529279877884065,
+      "abs_coefficient": 19.529279877884065
+    },
+    {
+      "feature": "cat__transmission_AV10",
+      "coefficient": -19.09620082230667,
+      "abs_coefficient": 19.09620082230667
+    },
+    {
+      "feature": "cat__vehicleclass_SUV: Standard",
+      "coefficient": 18.873347022471354,
+      "abs_coefficient": 18.873347022471354
+    },
+    {
+      "feature": "cat__make_PLYMOUTH",
+      "coefficient": -18.693572627162965,
+      "abs_coefficient": 18.693572627162965
+    },
+    {
+      "feature": "cat__vehicleclass_Pickup truck: Standard",
+      "coefficient": 18.524046700868507,
+      "abs_coefficient": 18.524046700868507
+    },
+    {
+      "feature": "cat__make_GMC",
+      "coefficient": -18.294261022395418,
+      "abs_coefficient": 18.294261022395418
+    },
+    {
+      "feature": "cat__vehicleclass_Compact",
+      "coefficient": -18.051211318408388,
+      "abs_coefficient": 18.051211318408388
+    },
+    {
+      "feature": "cat__make_Ram",
+      "coefficient": -17.351327274737912,
+      "abs_coefficient": 17.351327274737912
+    },
+    {
+      "feature": "cat__make_OLDSMOBILE",
+      "coefficient": -17.126229933507684,
+      "abs_coefficient": 17.126229933507684
+    },
+    {
+      "feature": "cat__make_MERCURY",
+      "coefficient": -17.104043345229442,
+      "abs_coefficient": 17.104043345229442
+    },
+    {
+      "feature": "cat__vehicleclass_Minicompact",
+      "coefficient": -16.914700089055795,
+      "abs_coefficient": 16.914700089055795
+    },
+    {
+      "feature": "cat__make_ACURA",
+      "coefficient": -16.732183038728593,
+      "abs_coefficient": 16.732183038728593
+    }
+  ]
+}

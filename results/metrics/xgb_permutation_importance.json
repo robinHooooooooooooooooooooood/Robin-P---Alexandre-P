@@ -1,0 +1,49 @@
+{
+  "model_type": "XGBRegressor",
+  "scoring": "r2",
+  "n_repeats": 10,
+  "top_k": 20,
+  "note": "Permutation importance is computed on the ORIGINAL input columns (before preprocessing).",
+  "importances": [
+    {
+      "feature": "enginesize_l",
+      "importance_mean": 0.6967412412166596,
+      "importance_std": 0.010230831002134618
+    },
+    {
+      "feature": "vehicleclass",
+      "importance_mean": 0.12622193098068238,
+      "importance_std": 0.001954839386190782
+    },
+    {
+      "feature": "cylinders",
+      "importance_mean": 0.10407142043113708,
+      "importance_std": 0.001833403706998126
+    },
+    {
+      "feature": "modelyear",
+      "importance_mean": 0.09937090873718261,
+      "importance_std": 0.002084926061630246
+    },
+    {
+      "feature": "make",
+      "importance_mean": 0.054685580730438235,
+      "importance_std": 0.0012161455646023892
+    },
+    {
+      "feature": "transmission",
+      "importance_mean": 0.047920006513595584,
+      "importance_std": 0.001212179190410665
+    },
+    {
+      "feature": "fueltype",
+      "importance_mean": 0.02021253705024719,
+      "importance_std": 0.0007931097431698973
+    },
+    {
+      "feature": "fuel_type_decoded",
+      "importance_mean": 0.0018636345863342284,
+      "importance_std": 0.00011289438887176014
+    }
+  ]
+}
