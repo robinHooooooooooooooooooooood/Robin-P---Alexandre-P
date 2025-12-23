@@ -35,6 +35,19 @@ Including them leads to an unrealistically high R². We detect this using correl
 6. **Evaluation**
    - Metrics: **MAE**, **RMSE**, **R²**
    - Plots: actual vs predicted, residual distribution
+  
+## Note on project evolution and alignment
+
+The initial written report focuses on a baseline approach (Linear Regression and PCA-based reasoning).
+During implementation, several methodological issues were identified, mainly **data leakage caused by fuel consumption variables**.
+
+As a result, the final code and video reflect an **improved and corrected pipeline**, including:
+- Explicit leakage detection (EDA + permutation importance)
+- Removal of proxy variables (fuel consumption and ratings)
+- Use of more advanced models (Random Forest, SVM, XGBoost)
+- Dimensionality reduction adapted to sparse data (TruncatedSVD)
+
+This evolution reflects a realistic machine learning workflow: identifying a problem, correcting it, and improving the model accordingly.
 
 ## Results
 **Best model (clean dataset): Random Forest**
