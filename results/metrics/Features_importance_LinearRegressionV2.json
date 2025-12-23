@@ -1,0 +1,42 @@
+[
+  {
+    "feature": "enginesize_l",
+    "importance_mean": 0.4420574050528942,
+    "importance_std": 0.005503328701797374
+  },
+  {
+    "feature": "vehicleclass",
+    "importance_mean": 0.2542552292988218,
+    "importance_std": 0.0026202504318106135
+  },
+  {
+    "feature": "make",
+    "importance_mean": 0.11493331376175261,
+    "importance_std": 0.0016633150303590263
+  },
+  {
+    "feature": "modelyear",
+    "importance_mean": 0.08642742116754303,
+    "importance_std": 0.001882974345818955
+  },
+  {
+    "feature": "cylinders",
+    "importance_mean": 0.06367520307646346,
+    "importance_std": 0.001095674818092029
+  },
+  {
+    "feature": "transmission",
+    "importance_mean": 0.04967353609216167,
+    "importance_std": 0.0014342121518361132
+  },
+  {
+    "feature": "fueltype",
+    "importance_mean": 0.028356622156142142,
+    "importance_std": 0.000586137162154151
+  },
+  {
+    "feature": "fuel_type_decoded",
+    "importance_mean": 0.0,
+    "importance_std": 0.0
+  }
+]
