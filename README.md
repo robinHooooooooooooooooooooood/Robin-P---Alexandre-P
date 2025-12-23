@@ -119,6 +119,8 @@ Top negative coefficients:
 | cat__vehicleclass_MINICOMPACT | -32.944 | 32.944 |
 | cat__vehicleclass_COMPACT | -32.394 | 32.394 |
 
+Across models, `enginesize_l` is by far the most influential feature, followed by `cylinders` and `modelyear`. Categorical variables (`vehicleclass`, `make`, `transmission`, `fueltype`) have a smaller but consistent contribution, mainly refining predictions through vehicle segment differences.
+
 
 ## How to run
 ### Option A — Google Colab (recommended)
