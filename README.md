@@ -1,38 +1,55 @@
-# Robin-P---Alexandre-P
-# Vehicle CO₂ Emission Prediction (Machine Learning Project)
+# Robin P. & Alexandre P. — Vehicle CO₂ Emission Prediction (ML Project)
 
 ## Business objective
-Predict vehicle **CO₂ emissions (g/km)** from technical characteristics (engine, cylinders, transmission, fuel type, vehicle class, model year).
-The objective is to support cleaner vehicle design and understand the main factors influencing emissions.
+Predict vehicle **CO₂ emissions (g/km)** from technical characteristics (engine size, cylinders, transmission, fuel type, vehicle class, model year).  
+The objective is to support cleaner vehicle design and identify the main factors driving emissions.
 
 ## Dataset
 Dataset: **MY1995–2023 Fuel Consumption Ratings** (Government of Canada / Kaggle mirror)  
 Target: `co2emission_g_km`
 
-**Key issue: data leakage**
-Fuel consumption variables (`comb_l100km`, `comb_mpg`, `fuelcons*`) are near-direct proxies for CO₂ emissions.
-This creates an unrealistically high R². We detect it using correlation analysis and permutation importance, then remove these variables to make the task realistic.
+### Key issue: data leakage
+Fuel consumption variables (`comb_l100km`, `comb_mpg`, `fuelcons*`) are near-direct proxies for CO₂ emissions.  
+Including them leads to an unrealistically high R². We detect this using correlation analysis and permutation importance, then remove these variables to make the task realistic.
 
 ## Methodology
-- Data cleaning: missing values, duplicates, standardized column names
-- EDA: distribution plots + correlation heatmap
-- Baseline: Linear Regression with a preprocessing pipeline (scaling + one-hot encoding)
-- Obstacle: leakage detected (R² too high)
-- Fix: drop leakage columns + drop high-cardinality `model`
-- Advanced models (clean dataset): Random Forest, SVM (+ TruncatedSVD), XGBoost
-- Metrics: MAE, RMSE, R²
+1. **Data cleaning**
+   - Standardized column names
+   - Removed missing values and duplicates
+2. **Exploratory Data Analysis (EDA)**
+   - Target distribution and group comparisons (e.g., fuel type)
+   - Correlation heatmap to highlight leakage/proxy variables
+3. **Baseline model**
+   - Linear Regression with a preprocessing pipeline:
+     - `StandardScaler` for numerical features
+     - `OneHotEncoder(handle_unknown="ignore")` for categorical features
+4. **Obstacle & project evolution**
+   - Suspiciously high baseline performance → leakage suspected
+   - Permutation importance confirms fuel consumption dominates
+   - Fix: drop leakage columns and high-cardinality `model`
+5. **Models on clean dataset**
+   - Linear Regression (clean baseline)
+   - Random Forest (ensemble)
+   - SVM + `TruncatedSVD` (dimensionality reduction for sparse one-hot features)
+   - XGBoost (advanced model, if available)
+6. **Evaluation**
+   - Metrics: **MAE**, **RMSE**, **R²**
+   - Plots: actual vs predicted, residual distribution
 
 ## Results
-Fill this section with your final numbers:
-- Baseline (leaky) R² / MAE / RMSE: **...**
-- Clean dataset best model R² / MAE / RMSE: **...**
+**Fill with your final numbers (from `results/metrics/metrics_summary.csv`):**
+- **Baseline (with leakage):** R² = **...**, MAE = **... g/km**, RMSE = **... g/km**
+- **Clean dataset (best model):** R² = **...**, MAE = **... g/km**, RMSE = **... g/km**
 
-Metrics table: `results/metrics/`  
+Metrics: `results/metrics/`  
 Figures: `results/figures/`
 
 ## How to run
-Open `notebooks/final.ipynb` and run all cells.
+### Option A — Google Colab (recommended)
+1. Open `notebooks/final.ipynb` in Colab
+2. Upload the dataset CSV when prompted (or place it in `data/`)
+3. Run all cells
 
-## References
-- Breiman (2001) Random Forests
-- Chen & Guestrin (2016) XGBoost
+### Option B — Local
+```bash
+pip install -r requirements.txt
