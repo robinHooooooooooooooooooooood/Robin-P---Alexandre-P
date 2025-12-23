@@ -1,4 +1,4 @@
-# Robin P. & Alexandre P. — Vehicle CO₂ Emission Prediction (ML Project)
+# Robin Piot & Alexandre Portier. — Vehicle CO₂ Emission Prediction (ML Project)
 
 ## Business objective
 Predict vehicle **CO₂ emissions (g/km)** from technical characteristics (engine size, cylinders, transmission, fuel type, vehicle class, model year).  
