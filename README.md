@@ -38,8 +38,8 @@ Including them leads to an unrealistically high R². We detect this using correl
 
 ## Results
 **Fill with your final numbers (from `results/metrics/metrics_summary.csv`):**
-- **Baseline (with leakage):** R² = **...**, MAE = **... g/km**, RMSE = **... g/km**
-- **Clean dataset (best model):** R² = **...**, MAE = **... g/km**, RMSE = **... g/km**
+- **Baseline with simple Linear Regression (with leakage):** R² = **0.928**, MAE = **11.71 g/km**, RMSE = **17.79 g/km**
+- **Clean dataset (best model : Random Forrest):** R² = **0.95329**, MAE = **9.628238 g/km**, RMSE = **14.332936 g/km**
 
 Metrics: `results/metrics/`  
 Figures: `results/figures/`
